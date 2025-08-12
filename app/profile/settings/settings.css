@@ -1,0 +1,268 @@
+/* ------------------------------------------------------------------- Wallet */
+.section .add-new-card {
+  background: var(--sidebar-color);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .add-new-card .title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-color);
+}
+.section .setting-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.section .setting-nav > .top {
+  display: flex;
+}
+.section .setting-nav > .top .st-nav {
+  border-radius: 12px 12px 0 0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+.section .setting-nav > .top .password.active,
+.section .setting-nav > .top .twofa.active,
+.section .setting-nav > .top .settings.active {
+  background: #fff;
+  color: var(--primary-color);
+}
+.section .add-new-card .title .right {
+  background: var(--primary-color-light);
+  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .add-new-card .title .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .content .password-menu {
+  display: none;
+}
+.section .content .password-menu.active {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+}
+.section .content .password-menu > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  color: var(--text-color);
+}
+.section .content .password-menu > .right input {
+  height: 65px;
+  background: var(--primary-color-light);
+  border: 1px solid #fff;
+  border-radius: 12px;
+}
+.section .content .password-menu > .right .row-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 48%;
+}
+.section .content .password-menu > .right .row-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.section .content .password-menu > .right .row-2 > .row-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.section .content .password-menu > .right button {
+  width: 360px;
+  height: 80px;
+  border: none;
+  border-radius: 12px;
+  background: #12cf68;
+  color: #fff;
+}
+.section .content .password-menu > .left,
+.section .content .twofa-menu > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-color);
+}
+.section .content .password-menu > .left .row,
+.section .content .twofa-menu > .left .row {
+  display: flex;
+  align-items: start;
+  background: var(--primary-color-light);
+  padding: 12px;
+  border-radius: 12px;
+}
+.section .content .twofa-menu {
+  display: none;
+}
+.section .content .twofa-menu.active {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--text-color);
+}
+.section .content .twofa-menu > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.section .content .twofa-menu > .right .two-step-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--primary-color-light);
+  border-radius: 12px;
+  width: fit-content;
+}
+.section .content .twofa-menu > .right .two-step-nav > .right,
+.section .content .twofa-menu > .right .two-step-nav > .left {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--primary-color);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+}
+.section .content .twofa-menu > .right .two-step-nav > .right.active,
+.section .content .twofa-menu > .right .two-step-nav > .left.active {
+  background: #fff;
+}
+.section .content .twofa-menu > .right form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .content .twofa-menu > .right form > button {
+  width: 360px;
+  height: 80px;
+  border-radius: 12px;
+  background: #12ce69;
+  color: #fff;
+}
+.section .content .twofa-menu > .right .google-menu {
+  display: none;
+}
+.section .content .twofa-menu > .right .google-menu.active {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .content .twofa-menu > .right .google-menu > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--primary-color-light);
+}
+.section .content .twofa-menu > .right .google-menu > div > .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.section .content .twofa-menu > .right .google-menu > div > .left input {
+  width: 350px;
+  height: 70px;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 12px;
+}
+.section .content .twofa-menu > .right .sms-menu {
+  display: none;
+}
+.section .content .twofa-menu > .right .sms-menu.active {
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.section .content .twofa-menu > .right .sms-menu .request-code {
+  display: flex;
+  gap: 12px;
+}
+.section .content .twofa-menu > .right .sms-menu .request-code > .right {
+  display: flex;
+  gap: 6px;
+}
+.section .content .twofa-menu > .right .sms-menu .request-code > .right input {
+  height: 65px;
+  max-width: 70px;
+  border-radius: 12px;
+  border: none;
+}
+.section .content .twofa-menu > .right .sms-menu .request-code > .left button {
+  width: max-content;
+  height: 65px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+.section .content .twofa-menu > .right .sms-menu > button {
+  width: 360px;
+  height: 80px;
+  border-radius: 12px;
+  background: #12ce69;
+  color: #fff;
+  border: none;
+}
+.section .content .settings-menu {
+  display: none;
+}
+.section .content .settings-menu.active {
+  display: block;
+  display: flex;
+  gap: 12px;
+  color: var(--text-color);
+}
+.section .content .settings-menu .item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--primary-color-light);
+  padding: 12px;
+  border-radius: 12px;
+  width: 30%;
+}
+.section .content .settings-menu .item .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section .content .settings-menu .item .dark-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sidebar-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ------------------------------------------------------------------- Wallet */

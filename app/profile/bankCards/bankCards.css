@@ -1,0 +1,131 @@
+/* ------------------------------------------------------------------- bank-card */
+
+.section .bank-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .bank-card .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section .bank-card .title > .right {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  gap: 12px;
+}
+.section .bank-card .title > .right > .right {
+  background: var(--primary-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+.section .bank-card .title > .right > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .bank-card .title > .right > .left span:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.section .bank-card .title > .right > .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+.section .bank-card .title button {
+  background: var(--primary-color);
+  color: #fff;
+  width: 260px;
+  height: 68px;
+  border-radius: 12px;
+}
+/* ------------------------ Bank Error ------------------------*/
+.section .bank-error {
+  background: var(--sidebar-color);
+  width: 700px;
+  padding: 16px;
+  color: var(--text-color);
+  display: flex;
+  border-radius: 12px;
+  gap: 20px;
+}
+.section .bank-error.disable {
+  display: none;
+}
+.section .bank-error .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .bank-error .left span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 500;
+}
+.section .bank-error .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+/* ------------------------ Bank Error ------------------------*/
+/* -------------------------- Add Card ------------------------*/
+.section .card-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.section .card-item {
+  background: var(--sidebar-color);
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-color);
+  width: 30%;
+}
+@media (max-width: 1100px) {
+  .section .card-item{
+    width: 40%;
+  }
+}
+@media (max-width: 860px) {
+  .section .card-item{
+    width: 100%;
+  }
+}
+.add-card {
+  border: 1px dashed var(--primary-color);
+}
+.section .card-item .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.section .card-item .top .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section .card-item .top .left {
+  color: #13cd68;
+}
+.section .card-item img {
+  width: 45px;
+}
+.section .card-item .row {
+  background: var(--primary-color-light);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 6px;
+  color: var(--primary-color);
+}
+/* -------------------------- Add Card ------------------------*/
+/* ------------------------------------------------------------------- bank-card */

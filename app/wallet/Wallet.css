@@ -1,0 +1,270 @@
+/* ------------------------------------------------------------------- Wallet */
+
+.section .wallet {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .wallet .title {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  gap: 12px;
+}
+.section .wallet .title > .right {
+  background: var(--primary-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+.section .wallet .title > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .wallet .title > .left span:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.section .wallet .title > .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+.section .wallet .balance {
+  background: var(--sidebar-color);
+  border-radius: 12px;
+  padding: 32px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .section .wallet .balance {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section .wallet .balance > .right {
+  display: flex;
+  align-items: center;
+}
+.section .wallet .balance > .right > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .wallet .balance > .right > .left span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+}
+.section .wallet .balance > .right > .left span:nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+}
+.section .wallet .balance > .left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .section .wallet .balance >.left {
+    display: flex;
+    flex-direction: column;
+  }
+  .section .wallet .balance > .left >.right{
+    width: 100%;
+  }
+}
+.section .wallet .balance > .left > .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--body-color);
+  padding: 12px;
+  border-radius: 12px;
+}
+.section .wallet .balance > .left > .right > .left,
+.section .wallet .balance > .left > .right > .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section .wallet .balance > .left > .right > .right > .right,
+.section .wallet .balance > .left > .right > .left > .right {
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.section .wallet .balance > .left > .right > .right > .left,
+.section .wallet .balance > .left > .right > .left > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .wallet .balance > .left > .left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .wallet .balance > .left > .left button {
+  width: 125px;
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  border: none;
+}
+@media (max-width: 768px) {
+  .section .wallet .balance >.left >.left{
+    width: 100%;
+  }
+  .section .wallet .balance > .left > .left button{
+    width: 100%;
+  }
+}
+.section .wallet .balance > .left > .left button:nth-child(1) {
+  background: #13ce68;
+}
+.section .wallet .balance > .left > .left button:nth-child(2) {
+  background: #fe475f;
+}
+/* ----------------------- Wallet List ------------------------*/
+.section .wallet .wallet-list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .wallet .wallet-list > .top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+.section .wallet .wallet-list > .top > .left {
+  display: flex;
+  gap: 0;
+}
+.section .wallet .wallet-list > .top button {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #fff;
+  background: none;
+}
+.section .wallet .wallet-list > .top button:nth-child(1) {
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+}
+.section .wallet .wallet-list > .top button:nth-child(2) {
+  border-radius: 12px 0 0 12px;
+  cursor: pointer;
+}
+.section .wallet .wallet-list > .top .list-changer.active ,
+.section .wallet .wallet-list > .top .card-changer.active{
+  background: var(--primary-color-light);
+}
+.section .wallet .wallet-list > .bottom {
+  background: var(--sidebar-color);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .wallet .wallet-list > .bottom > .top {
+  display: flex;
+  justify-content: end;
+}
+.section .wallet .wallet-list > .bottom > .top .search-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 12px;
+  background: var(--primary-color-light);
+}
+.section .wallet .wallet-list > .bottom > .top .search-field input {
+  width: 100%;
+  background: none;
+  border: none;
+}
+.section .wallet .wallet-list > .bottom > .bottom table {
+  width: 100%;
+  color: var(--text-color);
+  border-collapse: collapse;
+}
+.section .wallet .wallet-list > .bottom > .bottom table thead tr th {
+  background: var(--primary-color-light);
+  padding: 18px;
+}
+.section .wallet .wallet-list > .bottom > .bottom table img {
+  width: 40px;
+}
+.section .wallet .wallet-list > .bottom > .bottom table tbody > tr {
+  border-bottom: 1px solid #fff;
+}
+.section .wallet .wallet-list > .bottom > .bottom table tbody > tr > td {
+  text-align: center;
+  padding: 24px;
+}
+.section
+  .wallet
+  .wallet-list
+  > .bottom
+  > .bottom
+  table
+  tbody
+  > tr
+  > td:nth-child(5) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section .wallet .wallet-list > .bottom > .bottom table tbody .coin-name {
+  display: flex;
+}
+.section
+  .wallet
+  .wallet-list
+  > .bottom
+  > .bottom
+  table
+  tbody
+  .coin-name
+  > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .wallet .wallet-list > .bottom > .bottom table tbody button {
+  width: 105px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+}
+.section
+  .wallet
+  .wallet-list
+  > .bottom
+  > .bottom
+  table
+  tbody
+  button:nth-child(1) {
+  background: #e7f3fe;
+  color: #0f96fa;
+}
+.section
+  .wallet
+  .wallet-list
+  > .bottom
+  > .bottom
+  table
+  tbody
+  button:nth-child(2) {
+  background: #fef7eb;
+  color: #ffa43d;
+}
+/* ----------------------- Wallet List ------------------------*/
+/* ------------------------------------------------------------------- Wallet */

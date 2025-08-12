@@ -1,0 +1,13 @@
+/* ------------------------------------------------------------------- Footer */
+.section footer {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-color);
+}
+.section footer span {
+  color: var(--primary-color);
+  font-size: 16px;
+}
+/* ------------------------------------------------------------------- Footer */

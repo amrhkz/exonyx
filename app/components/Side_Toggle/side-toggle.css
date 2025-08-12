@@ -1,0 +1,6 @@
+.sidebar header .dark-switch {
+  cursor: pointer;
+}
+.sidebar header .dark-switch svg path {
+  stroke: var(--text-color);
+}

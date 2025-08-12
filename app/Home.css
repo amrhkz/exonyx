@@ -1,0 +1,412 @@
+/* -------------------------------------------------------------------- Notif */
+
+@media (min-width: 768px) {
+  .section {
+    padding: 32px;
+    position: relative;
+    right: 275px;
+    width: calc(100% - 275px);
+    transition: var(--tran-05);
+  }
+  .sidebar.close ~ .section {
+    right: 110px;
+    width: calc(100% - 110px);
+  }
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 32px;
+    position: relative;
+    width: 100%;
+    transition: var(--tran-05);
+  }
+  .sidebar.close ~ .section {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .notifbar {
+    padding: 32px;
+    position: relative;
+    right: 275px;
+    width: calc(100% - 275px);
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sidebar.close ~ .notifbar {
+    right: 110px;
+    width: calc(100% - 110px);
+  }
+}
+@media (max-width: 768px) {
+  .notifbar {
+    padding: 32px;
+    position: relative;
+    width: 100%;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sidebar.close ~ .notifbar {
+    width: 100%;
+  }
+}
+.notifbar .notifbar-content {
+  background: var(--sidebar-color);
+  border-radius: 6px;
+  color: var(--text-color);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+}
+.notifbar .notifbar-content span {
+  color: #ff6271;
+}
+/* -------------------------------------------------------------------- Notif */
+/* ------------------------------------------------------------------- Wallet */
+.section h2 {
+  margin-bottom: 24px;
+  color: var(--text-color);
+}
+.section .wallet-content {
+  padding: 28px;
+  background: var(--sidebar-color);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.section .wallet-content .r-wallet-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.section .wallet-content .r-wallet-content span {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-color);
+}
+.section .wallet-content .r-wallet-content span p:nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+}
+.section .wallet-content .r-wallet-content span p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section .wallet-content .r-wallet-content span p span {
+  color: var(--primary-color);
+}
+.section .wallet-content svg rect,
+.section .wallet-content svg circle,
+.section .wallet-content svg path {
+  stroke: var(--primary-color);
+}
+.section .wallet-content .l-wallet-content {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 12px;
+}
+.section .wallet-content .l-wallet-content button {
+  padding: 10px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 125px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+}
+.section .wallet-content .l-wallet-content button:nth-child(1) {
+  background: #fe465e;
+  color: #fff;
+}
+.section .wallet-content .l-wallet-content button:nth-child(2) {
+  background: #12ce69;
+  color: #fff;
+}
+.section .wallet-content .tdot {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+@media (max-width: 768px) {
+  .section .wallet-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .section .wallet-content .l-wallet-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .section .wallet-content .l-wallet-content button{
+    width: 100%;
+  }
+}
+/* ------------------------------------------------------------------- Wallet */
+
+/* ----------------------------------------------------------------- Relative */
+.section .card {
+  padding: 28px;
+  background: var(--sidebar-color);
+  width: 500px;
+  color: var(--text-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+@media (max-width: 768px) {
+  .section .card{
+    width: 360px;
+  }
+}
+.section .card .top {
+  display: flex;
+  gap: 24px;
+}
+.section .card .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary-color-light);
+  padding: 12px;
+  border-radius: 24px;
+  width: 70px;
+  height: 70px;
+}
+.section .card .top .right img {
+  width: 50px;
+}
+.section .card .top .left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+.section .card .top .left .top {
+  display: flex;
+  justify-content: space-between;
+}
+.section .card .top .left .top span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.section .card .top .left .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .card .top .left .bottom > span:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.section .card .top .left .bottom > span:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.section .card .top .left .bottom span:nth-child(2) > span:nth-child(1) {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+.section .card .top .left .bottom span:nth-child(2) > span:nth-child(2) {
+  color: #585c6b;
+  font-size: 12px;
+  font-weight: 500;
+}
+.section .card .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.section .card .bottom button {
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+}
+.section .card .bottom button:nth-child(1) {
+  background: #e4faf0;
+  color: #35ce68;
+}
+.section .card .bottom button:nth-child(2) {
+  background: #feeced;
+  color: #fe4a5f;
+}
+.section .card .bottom button:nth-child(3) {
+  background: #fff6eb;
+  color: #ffa43d;
+}
+.section .card .bottom button:nth-child(4) {
+  background: #e7f3fe;
+  color: #0f8bf8;
+}
+/* ----------------------------------------------------------------- Relative */
+/* --------------------------------------------------------- Cryptocurrencies */
+.section .title-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.section .title-section .searchfield {
+  display: flex;
+  align-items: center;
+  width: 280px;
+  border: 2px solid var(--text-color);
+  border-radius: 12px;
+  background: var(--sidebar-color);
+  padding: 12px;
+}
+.section .title-section .searchfield svg path {
+  stroke: var(--text-color);
+}
+.section .title-section .searchfield input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.swiper {
+  width: 100%;
+}
+.swiper .swiper-slide{
+  width: 370px;
+}
+.mySwiper-2 .swiper-slide{
+  width: 500px;
+}
+.swiper .swiper-slide .swiper-card {
+  width: 100%;
+  color: var(--text-color);
+}
+.swiper .swiper-slide .swiper-card > .top {
+  display: flex;
+  align-items: center;
+  background: var(--sidebar-color);
+  padding: 24px;
+  border-radius: 24px 24px 0 0;
+  gap: 24px;
+}
+.swiper .swiper-slide .swiper-card .top .right {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #353e52;
+  border-radius: 24px;
+  padding: 12px;
+}
+.swiper .swiper-slide .swiper-card .top .right img {
+  width: 45px;
+}
+.swiper .swiper-slide .swiper-card .top .left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.swiper .swiper-slide .swiper-card .top .left .top,
+.swiper .swiper-slide .swiper-card .top .left .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.swiper .swiper-slide .swiper-card .top .left .top span:nth-child(1) {
+  font-size: 16px;
+}
+.swiper .swiper-slide .swiper-card .top .left .top span:nth-child(2) {
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.swiper .swiper-slide .swiper-card .top .left .bottom span:nth-child(2) {
+  font-size: 14px;
+}
+.swiper .swiper-slide .swiper-card > .bottom {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary-color-light);
+  padding: 24px;
+  border-radius: 0 0 24px 24px;
+}
+.swiper .swiper-slide .swiper-card .bottom .right,
+.swiper .swiper-slide .swiper-card .bottom .left {
+  display: flex;
+  align-items: start;
+}
+.swiper .swiper-slide .swiper-card .bottom .right .left,
+.swiper .swiper-slide .swiper-card .bottom .left .left {
+  display: flex;
+  flex-direction: column;
+}
+.swiper .swiper-slide .swiper-card .bottom .right .left span:nth-child(1) {
+  color: green;
+}
+.swiper .swiper-slide .swiper-card .bottom .left .left span:nth-child(1) {
+  color: red;
+}
+.swiper .swiper-slide .swiper-card .bottom .right .left span:nth-child(2),
+.swiper .swiper-slide .swiper-card .bottom .left .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 700;
+}
+/* --------------------------------------------------------- Cryptocurrencies */
+/* -------------------------------------------------------- Digitalcurrencies */
+
+/* -------------------------------------------------------- Digitalcurrencies */
+/* ------------------------------------------------------------------ Tickets */
+.section .ticket {
+  background: var(--sidebar-color);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.section .ticket .title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.section .ticket .title-section h2 {
+  margin: 0;
+}
+.section .ticket button {
+  padding: 6px 12px;
+  width: 195px;
+  height: 60px;
+  border: none;
+  border-radius: 50px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+}
+.section .ticket table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.section .ticket th {
+  background: var(--primary-color-light);
+  color: var(--text-color);
+  padding: 24px;
+}
+.section .ticket span {
+  color: var(--text-color);
+}
+/* ------------------------------------------------------------------ Tickets */

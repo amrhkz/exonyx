@@ -1,0 +1,23 @@
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    border: none;
+    background: var(--primary-color-light);
+    cursor: pointer;
+}
+body.dark button{
+    background: #414B5D;
+}
+button .sun{
+    display: none;
+}
+body.dark button .sun{
+    display: block;
+}
+body.dark button .moon{
+    display: none;
+}

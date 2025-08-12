@@ -1,0 +1,391 @@
+/* ------------------------------------------------------------------- kyc */
+
+.section .kyc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .kyc .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section .kyc .title > .right {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  gap: 12px;
+}
+.section .kyc .title > .right > .right {
+  background: var(--primary-color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+.section .kyc .title > .right > .left {
+  display: flex;
+  flex-direction: column;
+}
+.section .kyc .title > .right > .left span:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.section .kyc .title > .right > .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+.section .kyc .title button {
+  background: var(--primary-color);
+  color: #fff;
+  width: 260px;
+  height: 68px;
+  border-radius: 12px;
+}
+/* ------------------------ KYC Levels ------------------------*/
+.section .kyc-levels {
+  background: var(--sidebar-color);
+  padding: 30px 50px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+/* KYC Levels Nav */
+.section .kyc-levels .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+  width: 100%;
+  color: var(--text-color);
+}
+.step {
+  background: var(--body-color);
+  height: 55px;
+  min-width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.step > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3), 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+}
+@media (max-width: 600px) {
+  .step{
+    font-size: 18px;
+    min-width: 45px;
+    height: 45px;
+  }
+  .step > div{
+    width: 30px;
+    height: 30px;
+  }
+}
+.step.active,
+.line.active {
+  background: #7dd20e;
+}
+
+.section .kyc-levels > .bottom .step-menu {
+  display: none;
+}
+.section .kyc-levels > .bottom .step-2-menu.active ,
+.section .kyc-levels > .bottom .step-1-menu.active{
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+}
+/* KYC Levels Nav */
+/* step notification */
+.section .kyc-levels > .bottom .step-menu > .right > .top {
+  display: flex;
+  align-items: center;
+  background: var(--primary-color-light);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .top .step-notif {
+  display: flex;
+  align-items: center;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .top .step-notif.disable {
+  display: none;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .top .step-notif > .left {
+  display: flex;
+  flex-direction: column;
+}
+/* step notification */
+.section .kyc-levels > .bottom .step-menu > .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom {
+  display: flex;
+  width: 100%;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom > form.disable {
+  display: none;
+}
+.item-1 {
+  grid-area: item-1;
+}
+.item-2 {
+  grid-area: item-2;
+}
+.item-3 {
+  grid-area: item-3;
+}
+.item-4 {
+  grid-area: item-4;
+}
+.item-5 {
+  grid-area: item-5;
+}
+.hor-line {
+  grid-area: hr;
+}
+.form-submit {
+  grid-area: btn;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom form {
+  display: grid;
+  grid-template-areas:
+    "item-1 item-2"
+    "item-3 item-4"
+    "item-5 item-5"
+    "hr hr"
+    "btn btn";
+  gap: 50px;
+  width: 100%;
+  color: var(--text-color);
+}
+@media (max-width: 1350px) {
+  .section .kyc-levels > .bottom .step-1-menu > .right > .bottom form{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1124px) {
+  .section .kyc-levels > .bottom .step-1-menu.active{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom form .item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom form .item input {
+  height: 60px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: var(--primary-color-light);
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  form
+  .item-5
+  .select-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 46%;
+  background: #fff;
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  form
+  .item-5
+  .select-menu
+  select {
+  height: 67px;
+  border: none;
+}
+
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  form
+  .form-submit
+  button {
+  background: #1b975d;
+  width: 100%;
+  max-width: 360px;
+  height: 67px;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+}
+@media (max-width: 1124px) {
+  .section .kyc-levels > .bottom .step-2-menu.active{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section .kyc-levels > .bottom .step-menu > .right > .bottom .contract-form {
+  display: flex;
+  flex-direction: column;
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  .contract {
+  border: 1px solid #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  .photo-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1124px) {
+  .section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  .photo-upload{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  .photo-upload
+  > .right
+  img {
+  border-radius: 12px;
+  width: 300px;
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  .photo-upload
+  > .left {
+  background: #f2ecfb;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+}
+.section
+  .kyc-levels
+  > .bottom
+  .step-menu
+  > .right
+  > .bottom
+  .contract-form
+  button {
+  width: 300px;
+  height: 85px;
+  border-radius: 12px;
+  background: #1b975d;
+  color: #fff;
+  border: none;
+}
+/* KYC Notes */
+.section .kyc-levels > .bottom .step-menu > .left > .level {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text-color);
+  background: var(--primary-color-light);
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+  border-radius: 12px;
+}
+.section .kyc-levels > .bottom .step-menu > .left > .level.disable {
+  display: none;
+}
+.section .kyc-levels > .bottom .step-menu > .left > .level span:nth-child(1) {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.section .kyc-levels > .bottom .step-menu > .left > .level > .item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section .kyc-levels > .bottom .step-menu > .left > .level > .item > .right {
+  background: #d4bafd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* KYC Notes */
+/* ------------------------ KYC Levels ------------------------*/
+/* ------------------------------------------------------------------- kyc */

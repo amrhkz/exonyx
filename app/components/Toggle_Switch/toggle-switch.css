@@ -1,0 +1,27 @@
+.switch {
+  background: #fff;
+  width: 25px;
+  height: 12px;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+.switch.active {
+  background: rgb(13, 110, 253);
+}
+.switch .switch-span {
+  background: #bfbfbf;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.switch .switch-span.active {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #fff;
+}

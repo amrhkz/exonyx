@@ -1,0 +1,309 @@
+/* --------------------------------------------------------------- Buy & Sell */
+.section .buy-sell {
+  background: var(--sidebar-color);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .buy-sell .top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section .buy-sell .top .right {
+  background: var(--primary-color-light);
+  padding: 8px;
+  border-radius: 12px;
+}
+.section .buy-sell .top .left {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+}
+.section .buy-sell .top .left span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 700;
+}
+.section .buy-sell .top .left span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 400;
+}
+.section .buy-sell .bottom {
+  display: flex;
+  gap: 24px;
+}
+.section .buy-sell .bottom > .right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .buy-sell .bottom .right .top ul {
+  display: flex;
+  width: 100%;
+  background: var(--primary-color-light);
+  padding: 6px;
+  border-radius: 12px;
+}
+.section .buy-sell .bottom .right .top ul li {
+  width: 100%;
+}
+.section .buy-sell .bottom .right .top ul li button {
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.section .buy-sell .bottom .right .top ul li button.active {
+  background: var(--text-color);
+}
+.section .buy-sell .bottom > .left {
+  flex: 1.25;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .buy-sell .bottom .left .item {
+  background: var(--primary-color-light);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 12px;
+  color: var(--text-color);
+}
+.section .buy-sell .bottom > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .buy-sell .bottom .right h2 {
+  color: var(--text-color);
+}
+.section .buy-sell .bottom .right .bottom .buy-menu {
+  display: none;
+}
+.section .buy-sell .bottom .right .bottom .buy-menu.close {
+  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .buy-sell .bottom .right .bottom .select-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--primary-color-light);
+  color: var(--text-color);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid var(--text-color);
+  position: relative;
+}
+.section .buy-sell .bottom .right .bottom .select-toggle .right {
+  display: flex;
+  align-items: center;
+}
+.section .buy-sell .bottom .right .bottom .select-toggle .right img {
+  width: 50px;
+}
+.section .buy-sell .bottom .right .bottom .select-toggle .left {
+  display: flex;
+  align-items: center;
+}
+.section .buy-sell .bottom .right .bottom .select-menu {
+  background: var(--primary-color-light);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 450px;
+  overflow: auto;
+  display: none;
+}
+.section .buy-sell .bottom .right .bottom .select-menu.open {
+  display: block;
+  background: var(--primary-color-light);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 450px;
+  overflow: auto;
+}
+.section .buy-sell .bottom .right .bottom .select-menu .title-row,
+.section .buy-sell .bottom .right .bottom .select-menu .search-row {
+  display: flex;
+  justify-content: space-between;
+}
+.section .buy-sell .bottom .right .bottom .select-menu .title-row > div {
+  background: var(--sidebar-color);
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section .buy-sell .bottom .right .bottom .select-menu .search-row input {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+.section .buy-sell .bottom .right .bottom .select-menu .coin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.section .buy-sell .bottom .right .bottom .select-menu .coin-list .coin-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 18px;
+}
+.section
+  .buy-sell
+  .bottom
+  .right
+  .bottom
+  .select-menu
+  .coin-list
+  .coin-item
+  .right {
+  display: flex;
+  gap: 12px;
+}
+.section
+  .buy-sell
+  .bottom
+  .right
+  .bottom
+  .select-menu
+  .coin-list
+  .coin-item
+  img {
+  width: 40px;
+  height: 40px;
+}
+.section .buy-sell .bottom .right .bottom .swap-coin {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 12px;
+}
+.section .buy-sell .bottom .right .bottom .swap-coin img {
+  width: 40px;
+}
+.section .buy-sell .bottom .right .bottom .swap-coin .top,
+.section .buy-sell .bottom .right .bottom .swap-coin .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-color);
+  padding: 12px;
+}
+.section .buy-sell .bottom .right .bottom .swap-coin .bottom {
+  background: var(--primary-color-light);
+  border-radius: 0 0 12px 12px;
+}
+.section .buy-sell .bottom .right .bottom .swap-coin .top input,
+.section .buy-sell .bottom .right .bottom .swap-coin .bottom input {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+}
+.section .buy-sell .bottom .right .bottom .payment {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  background: var(--primary-color-light);
+  border-radius: 12px;
+  padding: 24px;
+}
+.section .buy-sell .bottom .right .bottom .payment > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.section .buy-sell .bottom .right .bottom .payment > div span:nth-child(1) {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+.section .buy-sell .bottom .right .bottom .payment > div span:nth-child(2) {
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+.section .buy-sell .bottom .right .bottom button {
+  background: #1b975d;
+  color: #fff;
+  height: 75px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+}
+
+.section .buy-sell .bottom .right .bottom .sell-menu {
+  display: none;
+}
+.section .buy-sell .bottom .right .bottom .sell-menu.close {
+  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section .buy-sell .bottom .right .bottom .sell-menu .recieve-amount {
+  background: var(--primary-color-light);
+  padding: 24px;
+  border-radius: 12px;
+  color: #12ce69;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.section .buy-sell .bottom .right .bottom .sell-menu button {
+  background: #b53f57;
+  color: #fff;
+}
+.section .buy-sell .bottom .right .bottom .buy-menu .account-id input {
+  height: 100%;
+  width: 30%;
+  padding: 18px;
+  background: var(--primary-color-light);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+}
+.section .buy-sell .bottom .right .bottom .sell-menu .account-id input {
+  height: 100%;
+  width: 100%;
+  padding: 18px;
+  background: var(--primary-color-light);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+}
+/* --------------------------------------------------------------- Buy & Sell */
